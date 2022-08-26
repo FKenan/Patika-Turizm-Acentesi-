@@ -3,11 +3,12 @@ package com.PatikaTurizm.view;
 import com.PatikaTurizm.Helper.Config;
 import com.PatikaTurizm.Helper.Helper;
 import com.PatikaTurizm.model.Otel;
+import com.PatikaTurizm.model.User;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class MainGUI extends JFrame {
+public class AcenteGUI extends JFrame {
     private JPanel wrapper;
     private JPanel pnl_main_top;
     private JTable tbl_otel_list;
@@ -16,7 +17,7 @@ public class MainGUI extends JFrame {
     private DefaultTableModel mdl_otel_list;
     private Object[] row_otel_list;
 
-    public MainGUI() {
+    public AcenteGUI(User user) {
         add(wrapper);
         setSize(800, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -64,11 +65,6 @@ public class MainGUI extends JFrame {
 
             mdl_otel_list.addRow(row_otel_list);
         }
-    }
-
-    public static void main(String[] args) {
-        Helper.setLayout();
-        MainGUI mainGUI = new MainGUI();
     }
 }
 
